@@ -4,6 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#164c3a"><title>SIMPUS — Perpustakaan Sekolah</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ui-fix.css">
 </head>
 <body>
 <div id="login" class="login-shell">
@@ -19,13 +20,14 @@
 <div id="app" class="app-shell hidden">
   <aside class="sidebar"><a class="brand" href="#dashboard"><span class="brand-mark">S</span><span><b>SIMPUS</b><small>Perpustakaan Sekolah</small></span></a>
     <div class="school-name">PERPUSTAKAAN</div><nav id="nav" aria-label="Menu utama"></nav>
-    <div class="sidebar-bottom"><div class="profile"><div class="avatar" id="avatar">P</div><div><b id="user-name">Pengguna</b><small id="user-role">Anggota</small></div></div><button class="ghost signout" id="signout">Keluar</button></div>
+    <div class="sidebar-bottom"><div class="profile"><div class="avatar" id="avatar">P</div><div><b id="user-name">Pengguna</b><small id="user-role">Anggota</small></div></div><button class="ghost signout" id="signout">Keluar</button><div class="credits">Dibuat oleh <b>Mas T Digital</b></div></div>
   </aside>
-  <main class="main"><header class="topbar"><button id="menu-toggle" class="icon-button mobile-only" aria-label="Buka menu">☰</button><div><p class="eyebrow" id="today"></p><h1 id="page-title">Ringkasan</h1></div><div class="top-actions"><span class="online"><i></i> Terhubung</span><button class="icon-button" id="refresh" title="Muat ulang">↻</button></div></header>
+  <main class="main"><header class="topbar"><button id="menu-toggle" class="icon-button mobile-only" aria-label="Buka menu">☰</button><div><p class="eyebrow" id="today"></p><h1 id="page-title">Ringkasan</h1></div><div class="top-actions"><span class="online"><i></i> Terhubung</span><button class="icon-button" id="refresh" title="Muat ulang" aria-label="Muat ulang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9a7 7 0 0 1 11.7-2L20 12M4 12l2.7 5a7 7 0 0 0 11.7-2"/></svg></button></div></header>
     <section id="content" aria-live="polite"><div class="skeleton"></div></section>
   </main>
 </div>
-<dialog id="modal"><form id="modal-form" method="dialog"><div class="modal-head"><div><p class="eyebrow" id="modal-kicker">SIMPUS</p><h2 id="modal-title">Formulir</h2></div><button class="icon-button" value="cancel" aria-label="Tutup">×</button></div><div id="modal-fields"></div><div class="modal-actions"><button class="secondary" value="cancel">Batal</button><button class="primary" id="modal-submit" value="default">Simpan</button></div></form></dialog>
+<dialog id="modal"><form id="modal-form"><div class="modal-head"><div><p class="eyebrow" id="modal-kicker">SIMPUS</p><h2 id="modal-title">Formulir</h2></div><button class="icon-button" type="button" data-modal-close aria-label="Tutup formulir">×</button></div><div id="modal-fields"></div><div class="modal-actions"><button class="secondary" type="button" data-modal-close>Batal</button><button class="primary" id="modal-submit" type="submit">Simpan</button></div></form></dialog>
 <div id="toast" role="status" class="toast"></div>
 <script type="module" src="app.js"></script>
+<script defer src="ui-fix.js"></script>
 </body></html>
