@@ -1,0 +1,27 @@
+/* SIMPUS interface refresh */
+.sidebar{padding-top:22px;overflow:hidden}
+.sidebar nav{display:grid;gap:5px;flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#cad8ce transparent;padding:3px 3px 8px 0}
+.nav-link{min-height:44px;padding:10px 12px;gap:12px;font-size:13px;transition:background .16s,color .16s,transform .16s}
+.nav-link:hover{transform:translateX(2px)}
+.nav-icon{display:grid;place-items:center;width:20px;height:20px;flex:0 0 20px;color:#78877d}
+.nav-link.active .nav-icon{color:var(--green)}
+.nav-icon svg,.icon-button svg{width:18px;height:18px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-button{display:grid;place-items:center}
+.sidebar-bottom{flex:0 0 auto;background:#fff;padding-top:13px}
+.sidebar-bottom::after{content:"Dibuat oleh Mas T Digital";display:block;margin:8px 0 0 48px;padding:9px 4px 2px;border-top:1px solid var(--line);color:#89958d;font-size:10px;letter-spacing:.15px}
+.brand{padding-bottom:22px}
+.school-name{padding-top:2px}
+.main{padding-top:1px}
+.topbar{height:92px}
+.welcome{box-shadow:inset 0 0 0 1px #ffffff8a}
+.stat-card,.table-wrap,.import-card,.book-card{box-shadow:0 3px 12px #173c2810;transition:box-shadow .18s,transform .18s}
+.stat-card:hover,.import-card:hover{box-shadow:0 8px 22px #173c2819;transform:translateY(-1px)}
+dialog{max-height:calc(100dvh - 32px);overflow:auto}
+#modal-form{display:flex;flex-direction:column;gap:0}
+.modal-head{position:sticky;top:-24px;z-index:2;background:#fff;padding:0 0 10px}
+.modal-head .icon-button{font-size:21px;flex:0 0 40px;width:40px;height:40px}
+.modal-actions{position:sticky;bottom:-24px;background:#fff;padding:12px 0 0;margin-top:18px}
+.modal-actions button{min-width:88px}
+.primary:focus-visible,.secondary:focus-visible,.nav-link:focus-visible,.icon-button:focus-visible{outline:3px solid #a7cdb2;outline-offset:2px}
+@media(max-height:650px){.sidebar{padding-top:12px;padding-bottom:8px}.brand{padding-bottom:12px}.school-name{padding-bottom:5px}.nav-link{min-height:39px;padding-top:7px;padding-bottom:7px}.sidebar-bottom{padding-top:8px}}
+@media(max-width:720px){.sidebar{height:100dvh;overflow:hidden}.sidebar nav{min-height:0}.main{padding-top:0}.topbar{height:74px}.sidebar-bottom::after{margin-left:47px}}
